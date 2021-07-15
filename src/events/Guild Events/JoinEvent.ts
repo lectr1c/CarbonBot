@@ -37,6 +37,8 @@ async function imageWelcome(client, member: GuildMember) {
     `${__dirname}/../../../resources/images/welcomeBannerTemplate.png`
   );
 
+  img.resize(800, 200);
+
   const avatarimg = await Jimp.read(
     member.presence.user.displayAvatarURL({ format: "png", dynamic: true })
   );
